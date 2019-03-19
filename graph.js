@@ -79,7 +79,7 @@ const node6 = new Node('node6');
 const node7 = new Node('node7');
 const node8 = new Node('node8');
 
-// create network of nodes
+// create graph of nodes
 rootNode.addLeftNode(node2);
 rootNode.addRightNode(node3);
 
@@ -91,7 +91,9 @@ node3.addRightNode(node7);
 
 node4.addLeftNode(node8);
 
-// Instantiate BFS class
+// Instantiate graph class
 const graph1 = new Graph(rootNode);
-// console.log(BFS.search('node2'));
+// search for value
+console.log(BFS.search('node2')); // returs 'Found node2'
+// traverse graph
 graph1.bfsTraverse();

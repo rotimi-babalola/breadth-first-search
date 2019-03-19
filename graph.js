@@ -52,6 +52,7 @@ class Graph {
   bfsTraverse() {
     while (this.BFSQueue.queue.length > 0) {
       const currentNode = this.BFSQueue.queue[0];
+      console.log(currentNode.value);
 
       // if current node has a left child add it to the queue
       if (currentNode.leftNode) {
@@ -92,6 +93,6 @@ node4.addLeftNode(node8);
 // Instantiate graph class
 const graph1 = new Graph(rootNode);
 // search for value
-console.log(BFS.search('node2')); // returs 'Found node2'
+console.log(graph1.bfs('node2')); // returs 'Found node2'
 // traverse graph
-graph1.bfsTraverse();
+console.log(graph1.bfsTraverse());

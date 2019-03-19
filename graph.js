@@ -53,8 +53,6 @@ class Graph {
     while (this.BFSQueue.queue.length > 0) {
       const currentNode = this.BFSQueue.queue[0];
 
-      console.log(currentNode.value);
-
       // if current node has a left child add it to the queue
       if (currentNode.leftNode) {
         this.BFSQueue.enqueue(currentNode.leftNode);
